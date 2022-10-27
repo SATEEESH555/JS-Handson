@@ -1,0 +1,11 @@
+#name{
+    display: inline-block;
+    border: 4px;
+    margin-left: 25%;
+    background-color: white;
+    font-family: sans-serif;
+}
+.ques1{
+    border: 4px;
+    background-color: white;
+}
