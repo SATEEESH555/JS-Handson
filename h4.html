@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="h4.css">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Arrays</h1>
+    <pre class="query">
+        1) <span>Find the Product.</span>
+            Write a program that takes an array as input from the user and find out the product of the elements.
+
+            Note: You have to complete Find_Prod. No need to take any input.
+    </pre>
+
+     <pre class="sol">
+        sol :
+                const Find_Prod = (array, N) => 
+                {
+         
+                    const result = array.reduce((total,N) => total * N);
+                    return result;
+        
+                };
+         
+     </pre>
+
+     <pre class="query">
+        2) <span>Find the Sum.</span>
+           Write a program which takes an array as input from the user and find out the sum of the array elements.
+
+           Note: You have to complete Find_Sum. No need to take any input.
+            
+     </pre>
+
+     <pre class="sol">
+        sol : 
+              const Find_Sum = (array, N) => 
+              {
+                    const sum = array.reduce((total,N) => total + N);
+                    return sum;
+              };
+        
+        <pre>
+
+     <pre class="query">
+        3) <span>Count Occurrences</span>
+           You are given an array  A containing  N integer elements and an integer  K and your task 
+           is to return the count of occurrences of  K in array A.
+        
+           Note: You have to complete findCount function. No need to take any input
+
+     </pre>
+
+     <pre class="sol">
+        sol :
+              const findCount = (N, K, Arr) => 
+             {
+                  var count = 0;
+                  for(let i = 0 ; i < N; i++){
+                      if(Arr[i]==K){
+                      count++;
+                   }  
+            
+                  return count;
+          
+            };
+         
+
+     </pre>
+
+     <pre class="query">
+        4) <span>Even Odd</span>
+           You are given an array A containing  N integer elements, and your task is to return an array 
+           B( having a size equal to  2), where B[0] contains the sum of all even elements of array A 
+           and B[1] has the sum of all odd elements of the array A.
+        
+           Note: You have to complete findEvenOdd function. No need to take any input.
+     </pre>
+
+     <pre class="sol">
+        sol : 
+               const findEvenOdd = (N, Arr) => 
+               {
+          
+                   const B = [];
+                   var a = Arr.filter((x) => x % 2 == 0)
+                   var b = a.reduce((accu,cum) => (accu = accu + cum), 0)
+                   B.push(b);
+          
+                   var c = Arr.filter((x) => x % 2 !== 0)
+                   var d = c.reduce((accu,cum) => (accu = accu + cum), 0)
+                   B.push(d);
+          
+                return B;
+
+              };
+         
+
+     </pre>
+
+     <pre class="query">
+        5) <span>Find whether the number is present or not</span>
+           Write a program which takes an array as input from the user and a number. Check 
+           whether the number is present or not.
+        
+           Note: You have to complete Find_Num. No need to take any input.
+     </pre>
+
+     <pre class="sol">
+        sol : 
+                const Find_Num = (array,N,M) => 
+                {
+            
+                     for(i = 0; i< N ; i++){
+                          if(array[i] == M){
+                                return "YES";
+                          }
+                     }
+                    return "NO";
+                };
+         
+
+     </pre>
+
+     <pre class="query">
+        6) <span>Higher Age</span>
+            You are given an array A containing the age of persons in your locality, and 
+            your task is to find and return an array containing the age of persons that are over 
+            18(18 included).
+        
+            Note: Also, in the output array, the age should be in the same order as in the input 
+            array. You have to complete highAge function. No need to take any input.
+     </pre>
+
+     <pre class="sol">
+         sol : 
+                const highAge = (N, Arr) => 
+                {
+                     var b = Arr.filter((N) => N >= 18);
+                     return b;
+                };
+          
+     </pre>
+
+     <pre class="query">
+        7) <span>Increment the Array Elements</span>
+           You are provided an array of integers and you have to increment all array elements by 
+           1 and then print whole array.
+
+           You have to complete Inc_Arr. No need to take any input.
+        
+     </pre>
+
+     <pre class="sol">
+         sol :
+                const Inc_Arr = (array,N) => 
+                {
+                     const newArr = array.map(num => num + 1);
+                      console.log((newArr).join(" "));
+         };
+               
+     </pre>
+
+     <pre class="query">
+        8) <span>Pass or Fail</span>
+            You are given an array A containing the maths marks of students in your class, and 
+            your task is to determine if all the students pass in your class or not. A student is 
+            declared pass if his maths marks are greater than or equal to 32. If all the students 
+            pass in your class, return "YES" (without quotes); otherwise, return "NO" (without quotes).
+        
+            Note: You have to complete isAllPass function. No need to take any input.
+     </pre>
+
+     <pre class="sol">
+        sol : 
+               const isAllPass = (N, Arr) => 
+               {
+          
+                    const b = Arr.every(num => num >= 32);
+                      if(b == false){
+                        return "NO";
+                      }
+               
+                      else{
+                        return "YES";
+                     }
+                };
+     </pre>
+
+     <pre class="query">
+        9) <span>Unique Color Shirt </span>
+           Prepbuddy is very tasteful of clothes.He has N numbers of shirts hanging in the hanger 
+           in his wardrobe.Prepbuddy likes to wear different colored clothes. So, whenever he see 
+           there are two or more shirts with the same color, he removes all the shirt of that color 
+           from his wardrobe. Now, he wants to know how many M unique color shirts are left in the 
+           wardrobe. 
+           Prepbuddy wants you to find M.
+        
+           Note: As there are many shades of a color so consider integers as a color name.
+                 i.e, color of shirt is 0,1,2, … , N.
+     </pre>
+
+     <pre class="sol">
+        sol :
+               function Unique_Shirts (arr,N) {
+
+                     unique=arr.filter((value)=>arr.indexOf(value)===arr.lastIndexOf(value))
+                       return (unique.length);
+               }
+     </pre>
+
+     
+     <pre class="query">
+        10) <span>Min and Max</span>
+            Congratulations on making up to this question. Let us give you a fairly simple 
+            array problem to solve. If you know how to iterate through the array, you will easily be 
+            able to solve this.The problem statement is simple- given N elements, find the minimum and 
+            maximum numbers among those elements.
+        
+     </pre>
+
+     <pre class="sol">
+         sol :
+                function arrayMin(arr) {
+                    return Math.min(...arr);
+                }
+         
+                function arrayMax(arr) {
+                   return Math.max(...arr);
+           
+               }
+            
+     </pre>
+
+     <pre class="query">
+        11) <span>Birthday Game</span>
+            Yatharth and Anamika are playing a game. Anamika loves Yatharth very much and she wants 
+            to share a chocolate bar with him in which each of the squares consists of an integer 
+            represented by A[i]. She decides to share a contiguous segment of the chocolate bar 
+            selected such that the length of the segment matches Yatharth's birth month Mand the 
+            sum of the integers on the squares is equal to his birthday D. 
+        
+            You must determine how many ways she can divide the chocolate.
+        
+     </pre>
+
+     <pre class="sol">
+         sol :
+                function Birthday_Game(arr,D ,M) {
+                   let count = 0;
+                    for(let i = 0 ; i< arr.length - 1 ;i++){
+                         let subArray = arr.slice(i,i+M);
+                             if(subArray.length == M){
+                                    let sum=subArray.reduce((a,b)=>a+b,0);
+                                          if(sum == D){
+                                               count++;
+                                          }
+                            }
+                 
+                
+                    }
+              
+              return count;
+          
+          };
+               
+     </pre>
+
+
+        
+</body>
+</html>
