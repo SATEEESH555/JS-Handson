@@ -1,0 +1,29 @@
+#name{
+    display: inline-block;
+    border: 4px;
+    margin-left: 30%;
+    background-color: white;
+    color: black;
+}
+.ques{
+    background-color: white;
+}
+.output{
+    font-size: 25px;
+    background-color: black;
+    color: snow;
+    display: inline-block;
+    width: 290px;
+    height: 100px;
+    margin-left: 135px;
+}
+
+.output1{
+    font-size: 25px;
+    background-color: black;
+    color: snow;
+    display: inline-block;
+    width: 215px;
+    height: 244px;
+    margin-left: 60px;
+}

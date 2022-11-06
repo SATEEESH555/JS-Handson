@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="h7.css">
+</head>
+<body>
+    <h1 id="name">JavaScript Handson 7(Maps & Sets)</h1>
+    <div class="ques">
+        <p>
+            <b>
+                Q.1): "Problem: 
+                You are given a string (STR) of length N, consisting of only the lower case English alphabet. Your task is to remove all the duplicate occurrences of characters in the string.
+                <br> <br>
+                Input:
+                abcadeecfb
+            </b>
+        </p>
+        <b>Ans:</b>
+        <pre>
+            <b><code> 
+                const removeDuplicates = (str) => {
+                    const arr = str.split("");
+                    const arr2 = [];
+                    
+                    arr.forEach((el, i) => {
+                     if (!arr2.includes(el)) {
+                        arr2.push(el);
+                       }
+                     });
+                     return arr2.join("").replace(",", "").replace("", " ");
+                    };
+                    
+                    console.log(removeDuplicates( "a,b,c,a,d,e,e,c,f,b"));
+                </code>
+    <p class="output">
+    Output: abcdef
+    </p>
+            </b> 
+        </pre>
+    </div>
+    <br>
+    <div class="ques">
+        <p>
+            <b>
+                Q.2): "Problem:
+                You are given a string (STR) of length N, you have to print the count of all alphabet.(using maps)
+                
+                Input:
+                abcadeecfb
+                
+            </b>
+        </p>
+        <b>Ans:</b>
+        <pre>
+            <b><code> 
+                function countAlphabet(s)
+                {
+                  var d = new Map();
+                 
+                  s.split('').forEach(element => {
+                     
+                        if(d.has(element))
+                        {
+                            d.set(element, d.get(element)+1);
+                        }
+                        else
+                            d.set(element, 1);
+                  });
+                 
+                  s.split('').forEach(element => {
+                    if(d.has(element) && d.get(element)!=0)
+                    {
+                      console.log( element + "=" + d.get(element) + " ");
+                      d.set(element, 0);
+                    }
+                  });
+                }
+                countAlphabet("abcadeecfb"); 
+                </code>
+    <p class="output1">
+  Output: a=2
+          b=2
+          c=2
+          d=1
+          e=2
+          f=1
+                    </p>
+            </b> 
+        </pre>
+    </div>
+</body>
+</html>
