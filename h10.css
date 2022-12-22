@@ -1,0 +1,28 @@
+h1{
+    color: orange;
+    margin : 18px 0px 25px 360px;
+    text-decoration-line: underline;
+    
+}
+
+body{
+    margin-left:120px;
+}
+.query{
+    font-style: italic;
+    font-weight: bold;
+    color: maroon;
+    font-size: 1.2rem;
+}
+
+.sol{
+    font-weight: 900;
+    font-size: 1.1rem;
+    color: cornflowerblue;
+    
+}
+
+span{
+    color:forestgreen;
+    font-weight: bold;
+}

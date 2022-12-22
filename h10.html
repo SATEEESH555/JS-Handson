@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Closures</h1>
+    <pre class="query">
+        1) <span>" function counter(){
+            var counter = 0;
+        
+            function IncreaseCounter() {
+                return counter += 1;
+            };
+        
+            return IncreaseCounter;
+        }
+        
+        var counter = counter();
+        alert(counter());
+        alert(counter());
+        alert(counter());
+        alert(counter());"</span>
+    </pre>
+    <pre class="sol">
+        sol : 
+               output : 1
+                        2
+                        3
+                        4 
+     </pre>
+
+     <pre class="query">
+        2) <span>let count = 0;
+            (function () {
+              if (count === 0) {
+                let count = 1;
+                console.log(count); // What is logged?
+              }
+              console.log(count); // What is logged?
+            })();</span>
+    </pre>
+    <pre class="sol">
+        sol : 
+              output : 1
+                       0
+     </pre>
+     <pre class="query">
+       3)<span>for (var i = 0; i < 3; i++) {
+         setTimeout(function log() {
+           console.log(i); // What is logged?
+         }, 1000);
+      }</span>
+    </pre>
+    <pre class="sol">
+       sol : 
+             output : 3
+                      3
+                      3
+    </pre>
+    <pre class="query">
+       4) <span>Write a code to calculate area of a rectangle using inner function. In this 
+          case outer function should accept parameter length and inner function should accept
+          parameter breadth.</span>
+    </pre>
+    <pre class="sol">
+       sol : 
+             function outer(len){
+                 return len
+              }
+             function inner(breadth){
+                   console.log(`breadth is ${breadth}`)
+                       let length = outer(5)
+                   console.log(`length is ${length}`)
+                       let area = ( length * breadth);
+                   console.log(`Area of Rectangle is ${area}`)
+              }
+              inner(4)
+   </pre>
+   <pre class="query">
+       5) <span>Take a variable in outer function and create an inner function to increase 
+          the counter every time it is called
+         </span>
+    </pre>
+   <pre class="sol">
+       sol : 
+              var res = 0
+              function outer(){
+                   var counter = 0
+                    counter++
+                   return counter
+                }
+              function inner(){ 
+                   res += outer()
+                   console.log(res)
+               }
+              inner()            
+</pre>
+<pre class="query">
+       6) <span>"Print Output
+
+           var a = 12;
+           (function () {
+             alert(a);
+              })();"</span>
+</pre>
+<pre class="sol">
+      sol : 
+            output : 12
+</pre>
+<pre class="query">
+       7) <span>"var a = 10;
+          var x = (function () {
+          var a = 12;
+          return function () {
+            alert(a);
+          };
+        })();
+        x();"</span>
+</pre>
+<pre class="sol">
+      sol : 
+            output : 12
+<pre class="query">
+       8)<span>var globalVar = "xyz";
+
+        (function outerFunc(outerArg) {
+            var outerVar = 'a';
+            
+            (function innerFunc(innerArg) {
+            var innerVar = 'b';
+            
+            console.log(
+                "outerArg = " + outerArg + "\n" +
+                "innerArg = " + innerArg + "\n" +
+                "outerVar = " + outerVar + "\n" +
+                "innerVar = " + innerVar + "\n" +
+                "globalVar = " + globalVar);
+            
+            })(456);
+        })(123);</span>
+         </pre>
+         <pre class="sol">
+               sol : 
+                     output : outerArg = 123
+                     innerArg = 456
+                     outerVar = a
+                     innerVar = b
+                     globalVar = xyz
+</body>
+</html>
