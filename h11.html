@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="h11.css">
+    <title>Document</title>
+</head>
+<body>
+    <h1 class = "intro">DOM</h1>
+    <pre class="query">
+        1) <span>Write the code to access element which is having id as "text"</span>
+    </pre>
+    <pre class="sol">
+       sol :    let eleId = document.getElementById("text")
+                console.log(eleId.innerText)
+     </pre>
+
+     <pre class="query">
+        2) <span>Write the code to access element which is having tag as "h1"</span>
+    </pre>
+    <pre class="sol">
+        sol :   let h1 = document.getElementsByTagName("h1")
+                console.log(h1[0].innerText)        
+     </pre>
+
+     <pre class="query">
+        3) <span>Write the code to access element which is having class as "box"</span>
+     </pre>
+     <pre class="sol">
+        sol :   let box = document.getElementsByClassName("box")
+                console.log(box[0].innerText)         
+     </pre>
+     <pre class="query">
+        4) <span>Change the heading from ""Hello"" to ""Hello World"" using DOM functions</span>
+     </pre>
+     <pre class="sol">
+        sol :   let h1 = document.getElementsByTagName("h1")
+                h1[0].innerText = "Hello World"          
+    </pre>
+    <pre class="query">
+        5) <span>Create three cards on HTML page and arrange them using flex property in 
+           row or horizontal direction and also create button at the bottom named "Change 
+           Flex direction". When user clicks on this button, the cards arrangement should 
+           be changed to vertical direction.
+          </span>
+     </pre>
+    <pre class="sol">
+        sol : HTML 
+                    <div class="container">
+                    <div class="cards"></div>
+                    <div class="cards"></div>
+                    <div class="cards"></div>  
+                    </div>
+                    <button onclick="changeDirection()">change Flex direction</button>
+   </pre>
+   <pre class="query">
+        6) <span>What’s the difference between window vs document?</span>
+</pre>
+<pre class="sol">
+       sol : 
+             Document : The document object represent a web page that is loaded in the browser. 
+                        By accessing the document object, we can access the element in the HTML 
+                        page. With the help of document objects, we can add dynamic content to 
+                        our web page. The document object can be accessed with a window.document 
+                        or just document.
+             Window :   The window object is the topmost object of the DOM hierarchy. It represents 
+                        a browser window or frame that displays the contents of the webpage. Whenever
+                        a window appears on the screen to display the contents of the document, the 
+                        window object is created. 
+</pre>
+<pre class="query">
+        7) <span>Add one style attribute and give text color as red and id attribute and give the 
+           id value as ""heading"" in the above given h1 tag using DOM functions"</span>
+</pre>
+<pre class="sol">
+       sol :  
+             input :  
+              <img src="./helloip.jpg" height="60px" width = "300px" alt="">
+             output : 
+              <img src="./hellop.jpg" height="60px" width = "300px" alt="">
+                      let ele = document.getElementsByTagName("h1")
+                      ele[1].setAttribute("id","heading")
+                      ele[1].style.color = "red"
+                      console.log(ele[1])
+</pre>
+<pre class="query">
+        8) <span>Create an HTML page having content as Hello world and a button named Replace Text. 
+           When user will click on this button page content should be changed to "Welcome to 
+           Elevation academy"</span>
+</pre>
+<pre class="sol">
+       sol :  <div class="hello">Hello World</div>
+              <button onclick="changeText()">Replace Text</button>             
+</pre>
+<pre class="query ">
+        9) <span>Write code to implement timer clock using JS -- display HH:MM:SS -- the 
+           time should keep updating every second</span>
+</pre>
+<pre class="sol">
+       sol :<div class="parent">
+             HH:MM:SS-<span class ="hours"> </span><span>:</span><span class ="minutes"></span><span>:</span><span class ="seconds"></span><span class ="meridian"> </span>
+            </div>    
+</pre>
+<pre class="query ">
+        10)<span>Create a select drop down for selecting Year 20-21, 21-22 etc. Print the item 
+            text selected</span>
+</pre>
+<pre class="sol">
+       sol : <form action="">
+              select :  <select name="year" id="" class="years">
+                           <option value="2020-2021">2020 - 2021</option>
+                           <option value="2021-2022">2021 - 2022</option>
+                           <option value="2022-2023">2022 - 2023</option>
+                           <option value="2023-2024">2023 - 2024</option>
+                        </select>
+             </form>  
+
+              code : let ele1 = document.querySelector(".years").value
+                     console.log(ele1)
+                     
+</pre>
+
+
+    <script src="h11.js"></script>
+</body>
+</htm

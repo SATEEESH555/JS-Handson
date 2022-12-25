@@ -1,0 +1,60 @@
+.intro{
+    color:#D67D3E;
+    margin : 18px 0px 25px 360px;  
+    text-decoration-line: underline;
+    
+}
+
+body{
+    margin-left:120px;
+}
+.html{
+    text-decoration-line: underline;
+    text-decoration-color:cornflowerblue ;
+}
+.query{
+    font-style: italic;
+    font-weight: bold;
+    color:#d35688;
+    font-size: 1.2rem;
+}
+
+.sol{
+    font-weight: 900;
+    font-size: 1.1rem;
+    color: cornflowerblue;
+    
+}
+
+span{
+    color:forestgreen;
+    font-weight: bold;
+}
+
+.container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.cards{
+    height:100px;
+    width:100px;
+    background-color: brown;
+}
+button{
+    margin:5px;
+    height:30px;
+    background-color:green ;
+    color:white;
+    border-radius: 8px;
+}
+
+h1{
+    margin-left : 400px;
+    color: black;
+}
+
+.hello{
+    margin-left: 300px;
+}
+
