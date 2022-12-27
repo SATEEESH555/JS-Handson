@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="h12.css">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Array Of Objects</h1>
+    <pre class ="query">           let studentRecords = [ {name: 'John', id: 123, marks : 98 },
+                                 {name: 'Baba', id: 101, marks : 23 },
+                                 {name: 'yaga', id: 200, marks : 45 },
+                                 {name: 'Wick', id: 115, marks : 75 } ]</pre>
+    <pre class="query">
+        1) <span>We are interested in retrieving only the students' names; all the names 
+                 should be in caps.
+                  ['JOHN', 'BABA', 'YAGA', 'WICK']</span>
+    </pre>
+    <pre class="sol">
+        sol : const StuMapRes = studentRecorde.map((x) => console.log(x.name.to UpperCase())            
+     </pre>
+     <pre class="query">
+        2) <span>"Suppose we have the same dataset as above but this time we want to get the 
+            details of students who scored more than 50 marks.
+            [{name: 'John', id: 123, marks: 98 },{name: 'Wick', id: 115, marks: 75 }]"</span>
+    </pre>
+    <pre class="sol">
+        sol :  let marks = studentRecords.filter((x) => (x.marks>50))    
+               console.log(marks)
+     </pre>
+     <pre class="query">
+        3) <span>Retrieve the details of students who scored more than 50 marks and have IDs 
+            greater than 120.</span>
+     </pre>
+     <pre class="sol">
+        sol :  let arr = studentRecords.filter((x) => (x.marks>50) && (x.id > 120))    
+               console.log(arr)          
+     </pre>
+     <pre class="query">
+        4) <span>Consider the same scenario we have discussed above, but this time we would like
+             to know the sum total of the marks of the students.</span>
+     </pre>
+     <pre class="sol">
+        sol : let totalMarks =  studentRecords.reduce(( sum, {marks} ) => sum + markss , 0)
+             console.log(totalMarks)        
+    </pre>
+    <pre class="query">
+        5) <span>This time we want to get only the names of the students who scored more than 50 
+            marks from the same dataset used above.</span>
+   </pre>
+   <pre class="sol">
+        sol : let arr = studentRecords.filter((x) => x.marks>50)    
+              console.log(arr.map((x) => x.name)) 
+ <pre class="query">
+        6) <span>This time we are required to print the sum of marks of the students with id > 120.</span>
+</pre>
+<pre class="sol">
+       sol : let arr = studentRecords.filter((x) => x.id > 120)
+             console.log(arr.reduce((sum,x)=> sum += x.marks , 0))          
+</pre>
+<pre class="query">
+        7) <span>This time we are required to print the total marks of the students with marks 
+            greater than 50 after a grace of 15 marks has been added to those students who scored 
+            less than 50.</span>
+</pre>
+<pre class="sol">
+       sol :
+             for(let i = 0 ;i<4 ; i++){
+                 let sum = 15
+                 if(studentRecords[i].marks < 50){
+                      sum += studentRecords[i].marks
+                      studentRecords[i].marks = sum
+                }
+            }
+           console.log(studentRecords.filter(((x)=> x.marks > 50)).reduce((sum,p) => sum + p.marks,0))
+            
+</pre>
+<pre class ="query">
+       8) <span>Create 6 objects , each object will have name, class, roll no as properties. 
+           Store these objects in an array of objects. </span>
+</pre>
+<pre class="sol">
+       sol :  const arr = []
+              const obj1 = { name : "Amul",class : "1",rollno : "202201" }
+              const obj2  ={ name : "Raju",class : "2",rollno : "202202" }
+              const obj3  ={ name : "Dhanush",class : "3",rollno : "202203" }
+              const obj4  ={ name : "Mahesh",class : "4",rollno : "202204" }
+              const obj5  ={ name : "Monitha",class : "5",rollno : "202205" }
+              const obj6  ={ name : "Pavithra",class : "6",rollno : "202206" }
+              arr.push(obj1,obj2,obj3,obj4,obj5,obj6)
+              console.log(arr)  
+            
+                   
+</pre>
+<script src="./index.js"></script>
+</body>
+</html>
